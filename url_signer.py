@@ -1,6 +1,5 @@
 # url signer script -- adds hashed signature to api call
 
-
 import hashlib
 import hmac
 import base64

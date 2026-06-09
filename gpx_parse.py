@@ -1,6 +1,5 @@
 # gpx file reader -- returns gps data as python lists
 
-
 from gpx import read_gpx
 
 
