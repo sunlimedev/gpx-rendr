@@ -19,8 +19,9 @@ def extract_gpx_to_lists(file_path):
             for trkpt in trkseg.trkpt:
                 latitudes.append(round(float(trkpt.lat), ndigits=7))
                 longitudes.append(round(float(trkpt.lon), ndigits=7))
-                elevations.append(round(float(trkpt.ele), ndigits=6))
-                times.append(trkpt.time)
+                elevations.append(round(float(trkpt.ele), ndigits=7))
+                if trkpt.time is not None:
+                    times.append(trkpt.time)
 
     # return lists
     return latitudes, longitudes, elevations, times
